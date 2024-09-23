@@ -3,9 +3,12 @@
 Modify your Knight’s Tour solver to print the trace below.
 
 PART 1. Data
+
  1) Board: 5x5.
  2) Initial position: X=1, Y=1. L=1.
+    
 PART 2. Trace
+
  1) R1. U=3, V=2. L=2. Free. BOARD[3,2]:=2.
  2) -R1. U=5, V=3. L=3. Free. BOARD[5,3]:=3.
  3) --R1. U=7, V=4. L=4. Out.
@@ -37,13 +40,13 @@ PART 2. Trace
  ...) ------------------R8. U=3, V=2. L=20. Thread. Backtrack
  ...) -----------------R7. U=3, V=3. L=19. Thread.
  ...) -----------------R8. U=4, V=4. L=19. Thread. Backtrack.
-- 16 -
-Artificial Intelligence, 31 Aug 2024
  ...) ----------------R5. U=2, V=3. L=18. Thread.
  ...) ----------------R6. U=3, V=2. L=18. Thread.
  ...) ----------------R7. U=5, V=2. L=18. Free. BOARD[5,2]:=18.
  ...) -----------------R1. U=7, V=3. L=19. Out.
+     
  And so on.
+ 
 70611) ---------------------R1. U=5, V=5. L=23. Free. BOARD[5,5]:=23.
 70612) ----------------------R1. U=7, V=6. L=24. Out.
 70613) ----------------------R2. U=6, V=7. L=24. Out.
@@ -58,9 +61,11 @@ Artificial Intelligence, 31 Aug 2024
 70622) -----------------------R5. U=2, V=2. L=25. Thread.
 70623) -----------------------R6. U=3, V=1. L=25. Thread.
 70624) -----------------------R7. U=5, V=1. L=25. Free. BOARD[5,1]:=25.
+       
 PART 3. Results
  1) Path is found. Trials=70624.
  2) Path graphically:
+    
  Y, V ^
  5 | 21 16 11 4 23
  4 | 10 5 22 17 12
@@ -78,6 +83,7 @@ Seven tests:
 5) N=6, X=1, Y=1. Trials=1 985 212.
 6) N=7, X=1, Y=1. Trials=57 209 233.
 7) N=4, X=1, Y=1. No tour. Trials=17 784.
+   
 Print the output of each test to two files as follows:
 a) PART 1 and PART 3 – to screen and the file out-short.txt;
 b) all three parts – to the file out-long.txt.
