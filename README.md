@@ -20,29 +20,53 @@ PART 2. Trace
  9) ---R4. U=2, V=6. L=5. Out.
  10) ---R5. U=2, V=4. L=5. Free. BOARD[2,4]:=5.
  11) ----R1. U=4, V=5. L=6. Thread.
+     
  And so on until the deadend at L=21. Then backtrack one level, i.e. pop one hyphen.
+ 
  ...) -------------------R1. U=4, V=2. L=21. Free. BOARD[4,2]:=21.
+ 
  ...) --------------------R1. U=6, V=3. L=22. Out.
+ 
  ...) --------------------R2. U=5, V=4. L=22. Thread.
+ 
  ...) --------------------R3. U=3, V=4. L=22. Thread.
+ 
  ...) --------------------R4. U=2, V=3. L=22. Thread.
+ 
  ...) --------------------R5. U=2, V=1. L=22. Thread.
+ 
  ...) --------------------R6. U=3, V=0. L=22. Out.
+ 
  ...) --------------------R7. U=5, V=0. L=22. Out.
+ 
  ...) --------------------R8. U=6, V=1. L=22. Out. Backtrack.
+ 
  ...) -------------------R2. U=3, V=3. L=21. Thread.
+ 
  ...) -------------------R3. U=1, V=3. L=21. Thread.
+ 
  ...) -------------------R4. U=0, V=2. L=21. Out.
+ 
  ...) -------------------R5. U=0, V=0. L=21. Out.
+ 
  ...) -------------------R6. U=1, V=-1. L=21. Out.
+ 
  ...) -------------------R7. U=3, V=-1. L=21. Out.
+ 
  ...) -------------------R8. U=4, V=0. L=21. Out. Backtrack.
+ 
  ...) ------------------R8. U=3, V=2. L=20. Thread. Backtrack
+ 
  ...) -----------------R7. U=3, V=3. L=19. Thread.
+ 
  ...) -----------------R8. U=4, V=4. L=19. Thread. Backtrack.
+ 
  ...) ----------------R5. U=2, V=3. L=18. Thread.
+ 
  ...) ----------------R6. U=3, V=2. L=18. Thread.
+ 
  ...) ----------------R7. U=5, V=2. L=18. Free. BOARD[5,2]:=18.
+ 
  ...) -----------------R1. U=7, V=3. L=19. Out.
      
  And so on.
@@ -92,5 +116,7 @@ Seven tests:
 7) N=4, X=1, Y=1. No tour. Trials=17 784.
    
 Print the output of each test to two files as follows:
+
 a) PART 1 and PART 3 – to screen and the file out-short.txt;
+
 b) all three parts – to the file out-long.txt.
